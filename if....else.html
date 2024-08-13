@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="textArea">
+    <button id="clickMe" onclick="checkDays()">Submit</button>
+</body>
+</html>
+<script>
+    function checkDays() {
+        let input = document.getElementById('textArea').value.toLowerCase().trim()
+        if (input === 'february') {
+           alert(`${input} has 29 days`) 
+        }
+        else if (input === 'september' || input === 'april' || input === 'june' || input === 'november') {
+         alert (`${input} has 30 days`)   
+        } 
+        else if (input === 'january' || input === 'march' || input === 'may' || input === 'july' || input === 'august' || input === 'october' || input === 'december') {
+            alert(`${input} has 30 days`)
+        }
+        else if (input === '') {
+            alert('You did not enter a Month')
+        }
+        else {
+            alert('Please enter a message')
+        }
+    }
+</script>
